@@ -1,0 +1,144 @@
+/* - Global */
+:root {
+  font-size: 16px;
+  --background-color: #262626;
+  --main-color: white;
+  --circle-color: #0767b3;
+  --cross-color: #ae0204;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* - Main */
+#wrapper {
+  background-color: var(--background-color);
+  color: white;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-flow: column;
+  align-content: flex-start;
+}
+
+h1 {
+  text-align: center;
+  width: auto;
+  margin: 3rem;
+  font-size: 3rem;
+}
+
+img {
+  width: 100px;
+}
+
+#status {
+  text-align: center;
+  width: auto;
+  margin: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#reset-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 3vh;
+  right: 3vh;
+
+  height: 55px;
+  width: 110px;
+
+  background: none;
+  box-shadow: none;
+  color: white;
+  border: 3px white solid;
+}
+
+/* - Game content */
+#game-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* -- Game zone */
+#game-zone {
+  display: flex;
+  flex-flow: row wrap;
+  height: 500px;
+  width: 500px;
+
+  margin: 50px;
+}
+
+#game-zone .morpion-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  border: 3px solid white;
+}
+
+#game-zone .morpion-box:nth-child(3n + 3) {
+  border-right: 0;
+}
+
+#game-zone .morpion-box:nth-child(3n - 2) {
+  border-left: 0;
+}
+
+#game-zone .morpion-box:nth-child(1),
+#game-zone .morpion-box:nth-child(2),
+#game-zone .morpion-box:nth-child(3) {
+  border-top: 0;
+}
+
+#game-zone .morpion-box:nth-child(7),
+#game-zone .morpion-box:nth-child(8),
+#game-zone .morpion-box:nth-child(9) {
+  border-bottom: 0;
+}
+
+/* -- Info content */
+#infos {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+#infos .infos-content {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  font-size: 1.5rem;
+  font-style: italic;
+
+  width: 400px;
+  margin: 40px;
+}
+
+#infos .infos-content img {
+  margin-right: 50px;
+}
+
+.O {
+  filter: invert(23%) sepia(100%) saturate(1904%) hue-rotate(191deg) brightness(92%) contrast(94%);
+  color: var(--circle-color);
+}
+
+.X {
+  filter: invert(9%) sepia(66%) saturate(7480%) hue-rotate(355deg) brightness(93%) contrast(99%);
+  color: var(--cross-color);
+}
