@@ -9,11 +9,11 @@ const display = {
   },
 
   setSymbol(box, symbol) {
-    console.log(this.firstPlayerSymbol);
+    console.log(display.firstPlayerSymbol);
     box.append(
       symbol == "O"
-        ? this.firstPlayerSymbol.cloneNode(true)
-        : this.secondPlayerSymbol.cloneNode(true)
+        ? display.firstPlayerSymbol.cloneNode(true)
+        : display.secondPlayerSymbol.cloneNode(true)
     );
   },
 
@@ -44,6 +44,6 @@ const display = {
       box.removeChild(box.lastElementChild);
     });
 
-    this.showCurrentPlayer();
+    display.showCurrentPlayer();
   },
 };
